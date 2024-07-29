@@ -29,8 +29,13 @@ const useStyles = makeStyles()((theme) => {
             }
         },
         contentText: {
-            paddingInlineStart: '12px',
-            paddingTop: '30px'
+            paddingInlineStart: '17px',
+            paddingTop: '30px',
+            '& .MuiGrid-item': {
+                display: 'flex',
+                alignItems: 'center',
+                gap: '10px'
+            }
         },
         mark: {
             width: '10px',

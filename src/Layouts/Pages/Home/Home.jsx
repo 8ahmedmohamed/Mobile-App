@@ -101,12 +101,12 @@ const Home = () => {
                         </LocalizationProvider>
                     </MuiGrid>
                 <Box className={classes.contentText}>
-                    <MuiGrid container spacing={1}>
-                            <MuiGrid item xs={12} style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
+                    <MuiGrid container>
+                            <MuiGrid item xs={12} style={{ marginBottom: '10px'}}>
                                 <Box className={classes.mark}></Box>
                                 <Typography variant='h6'>{t('Home:GovernorateSummer')}</Typography>
                             </MuiGrid>
-                            <MuiGrid item xs={12} style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
+                            <MuiGrid item xs={12}>
                                 <Box className={classes.mark}></Box>
                                 <Typography variant='h6'>{t('Home:blegresh')}</Typography>
                             </MuiGrid>

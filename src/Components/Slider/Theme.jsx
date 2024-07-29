@@ -12,7 +12,7 @@ const useStyles = makeStyles()(() => {
                 marginRight: '0px !important',
                 '& img': {
                     width: '100%',
-                    height: '100%'
+                    height: '170px'
                 }
             }
         },

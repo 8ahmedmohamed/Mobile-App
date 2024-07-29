@@ -7,6 +7,9 @@ const useStyles = makeStyles()(() => {
         },
         sliderImages: {
             marginBottom: '0px',
+            '& .splide': {
+                height: '170px'
+            }
         },
         events: {
             marginTop: '20px',

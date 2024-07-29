@@ -6,7 +6,10 @@ const useStyles = makeStyles()((theme) => {
             margin: 0
         },
         sliderImages: {
-            marginBottom: '0px'
+            marginBottom: '0px',
+            '& .splide': {
+                height: '170px'
+            }
         },
         parks: {
             marginBottom: '150px'

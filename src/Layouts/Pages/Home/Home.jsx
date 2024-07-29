@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 // Material UI
 import { Box, Grid as MuiGrid, Badge, Typography } from '@mui/material';
@@ -6,9 +6,6 @@ import { Box, Grid as MuiGrid, Badge, Typography } from '@mui/material';
 import { Splide } from "@splidejs/react-splide";
 
 import Slider from '../../../Components/Slider/Slider';
-
-// Translation
-import { useTranslation } from 'react-i18next';
 
 import "dayjs/locale/ar";
 import "dayjs/locale/en";
@@ -24,9 +21,6 @@ import useStyles from './Theme';
 
 const Home = () => {
     const { classes } = useStyles();
-    const { t } = useTranslation(['Home']);
-    const [position] = useState(localStorage.language);
-    const [language, setLanguage] = useState('en');
 
     // const CustomPickersDay = styled(PickersDay, {
     //     shouldForwardProp: (prop) => prop !== 'isSelected' && prop !== 'isHovered',
@@ -38,11 +32,6 @@ const Home = () => {
     //         },
     //     }),
     // }));
-
-    useEffect(() => {
-        // i18next.changeLanguage(position);
-        setLanguage(position)
-    }, [t, position])
 
     const dayFormat = (day) => {
         switch (day) {
@@ -77,7 +66,7 @@ const Home = () => {
                     vertical: 'bottom',
                     horizontal: 'right',
                 }}>
-                <PickersDay {...other} day={day} sx={{ px: 2.5 }} outsideCurrentMonth={outsideCurrentMonth}/>
+                <PickersDay {...other} day={day} sx={{ px: 2.5 }} outsideCurrentMonth={outsideCurrentMonth} />
             </Badge>
         );
     }
@@ -86,7 +75,7 @@ const Home = () => {
         <React.Fragment>
             <Box className={classes.root}>
                 <Box className={classes.sliderImages}>
-                    <Splide aria-label="images" options={{ type: "loop", direction: language === 'ar' ? "rtl" : "ltr", autoWidth: true, perMove: 1, autoplay: true, speed: 3000, gap: "10px", }}>
+                    <Splide aria-label="images" options={{ type: "loop", direction: "rtl", autoWidth: true, perMove: 1, autoplay: true, speed: 3000, gap: "10px", }}>
                         <Slider />
                     </Splide>
                 </Box>
@@ -100,18 +89,18 @@ const Home = () => {
                             }} slotProps={{ day: { wetDays } }} />}
                         </LocalizationProvider>
                     </MuiGrid>
-                <Box className={classes.contentText}>
-                    <MuiGrid container>
-                            <MuiGrid item xs={12} style={{ marginBottom: '10px'}}>
+                    <Box className={classes.contentText}>
+                        <MuiGrid container>
+                            <MuiGrid item xs={12} style={{ marginBottom: '10px' }}>
                                 <Box className={classes.mark}></Box>
-                                <Typography variant='h6'>{t('Home:GovernorateSummer')}</Typography>
+                                <Typography variant='h6'>فعاليات مهرجان صيف محافظة القري</Typography>
                             </MuiGrid>
                             <MuiGrid item xs={12}>
                                 <Box className={classes.mark}></Box>
-                                <Typography variant='h6'>{t('Home:blegresh')}</Typography>
+                                <Typography variant='h6'>مهرجان واجهة بلجرشي</Typography>
                             </MuiGrid>
-                    </MuiGrid>
-                </Box>
+                        </MuiGrid>
+                    </Box>
                 </Box>
             </Box>
         </React.Fragment>

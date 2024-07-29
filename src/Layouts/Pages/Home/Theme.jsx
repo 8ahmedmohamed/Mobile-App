@@ -7,6 +7,9 @@ const useStyles = makeStyles()((theme) => {
         },
         sliderImages: {
             marginBottom: '0px',
+            '& .splide': {
+                height: '170px'
+            }
         },
         home: {
             marginBottom: '150px'

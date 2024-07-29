@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 // Material UI
 import { Box, Card, CardContent, CardMedia, Typography } from '@mui/material';
@@ -6,9 +6,6 @@ import { Box, Card, CardContent, CardMedia, Typography } from '@mui/material';
 import { Splide } from "@splidejs/react-splide";
 
 import Slider from '../../../Components/Slider/Slider';
-
-// Translation
-import { useTranslation } from 'react-i18next';
 
 //React Router
 import { NavLink } from 'react-router-dom';
@@ -21,53 +18,45 @@ import useStyles from './Theme';
 
 const Parks = () => {
     const { classes } = useStyles();
-    const { t } = useTranslation(['Parks']);
-    const [position] = useState(localStorage.language);
-    const [language, setLanguage] = useState('en');
-
-    useEffect(() => {
-        setLanguage(position)
-    }, [t, position])
 
     return (
         <React.Fragment>
             <Box className={classes.root}>
                 <Box className={classes.sliderImages}>
-                    <Splide aria-label="images" options={{ type: "loop", direction: language === 'ar' ? "rtl" : "ltr", autoWidth: true, perMove: 1, autoplay: true, speed: 3000, gap: "10px", }}>
+                    <Splide aria-label="images" options={{ type: "loop", direction: "rtl", autoWidth: true, perMove: 1, autoplay: true, speed: 3000, gap: "10px", }}>
                         <Slider />
                     </Splide>
                 </Box>
                 <Box className={classes.parks}>
                     <Card className={classes.card}>
                         <CardContent className={classes.cardContent}>
-                            <Typography className={classes.cardTitle} gutterBottom variant="h6">{t('Parks:alJanabinPark')}</Typography>
-                            <Typography variant="body2">{t('Parks:alJanabinParkDescription')}</Typography>
-                            <NavLink to='/' className={classes.more} onClick={() => { }}>{t('Parks:more')}...</NavLink>
+                            <Typography className={classes.cardTitle} gutterBottom variant="h6">منتزة الجنابين</Typography>
+                            <Typography variant="body2">يعتبر منتزة و وادي الجنابين الذي يبعد عن المحافظة 15 كم جنوبا من أكثر المنتزهات هدوء و طبيعة, و هو مميز</Typography>
+                            <NavLink to='/' className={classes.more} onClick={() => { }}>المزيد...</NavLink>
                         </CardContent>
                         <CardMedia className={classes.cardImage} image={saudiArabiaMap} title="Al-Janabin Park" />
                     </Card>
                     <Card className={classes.card}>
                         <CardContent className={classes.cardContent}>
-                            <Typography className={classes.cardTitle} gutterBottom variant="h6">{t('Parks:raghadanPark')}</Typography>
-                            <Typography variant="body2">{t('Parks:raghadanParkDescription')}</Typography>
-                            <NavLink to='/' className={classes.more} onClick={() => { }}>{t('Parks:more')}...</NavLink>
+                            <Typography className={classes.cardTitle} gutterBottom variant="h6">منتزة رغدان</Typography>
+                            <Typography variant="body2">اشهر المنتزهات بمنطقة الباحة يقع بالقرب من وسط مدينة الباحة و يعد من أجمل المنتزهات في منطقة </Typography>
+                            <NavLink to='/' className={classes.more} onClick={() => { }}>المزيد...</NavLink>
                         </CardContent>
                         <CardMedia className={classes.cardImage} image={saudiArabiaMap} title="Raghadan Park" />
                     </Card>
                     <Card className={classes.card}>
                         <CardContent className={classes.cardContent}>
-                            <Typography className={classes.cardTitle} gutterBottom variant="h6">{t('Parks:princeMishariPark')}</Typography>
-                            {/* <Typography className={classes.cardTitle} gutterBottom variant="h6">{t('Parks:princeMishariBinSaudbinAbdulazizPark')}</Typography> */}
-                            <Typography variant="body2">{t('Parks:princeMishariParkDescription')}</Typography>
-                            <NavLink to='/' className={classes.more} onClick={() => { }}>{t('Parks:more')}...</NavLink>
+                            <Typography className={classes.cardTitle} gutterBottom variant="h6">منتزة الامير مشاري بن سعود بن عبد العزيز</Typography>
+                            <Typography variant="body2">يقع شمال غرب الباحة على و يتوفر به جميع الخدمات و يوجد بها شلال ينحدر في بركه محاطة بالصخور, كانت</Typography>
+                            <NavLink to='/' className={classes.more} onClick={() => { }}>المزيد...</NavLink>
                         </CardContent>
                         <CardMedia className={classes.cardImage} image={saudiArabiaMap} title="Prince Mishari Park" />
                     </Card>
                     <Card className={classes.card}>
                         <CardContent className={classes.cardContent}>
-                            <Typography className={classes.cardTitle} gutterBottom variant="h6">{t('Parks:alShukranPark')}</Typography>
-                            <Typography variant="body2">{t('Parks:alShukranParkDescription')}</Typography>
-                            <NavLink to='/' className={classes.more} onClick={() => { }}>{t('Parks:more')}...</NavLink>
+                            <Typography className={classes.cardTitle} gutterBottom variant="h6">منتزة الشكران</Typography>
+                            <Typography variant="body2">منتزة الشكران</Typography>
+                            <NavLink to='/' className={classes.more} onClick={() => { }}>المزيد...</NavLink>
                         </CardContent>
                         <CardMedia className={classes.cardImage} image={saudiArabiaMap} title="Al-Shukran Park" />
                     </Card>

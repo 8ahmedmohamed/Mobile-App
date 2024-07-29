@@ -1,7 +1,4 @@
-import React, { useEffect } from 'react';
-
-// Translation
-import i18next from "i18next";
+import React from 'react';
 
 // React Router
 import { Outlet } from 'react-router-dom';
@@ -18,10 +15,6 @@ import useStyles from './Theme';
 
 const Container = () => {
     const { classes } = useStyles();
-
-    useEffect(() => {
-        i18next.changeLanguage(localStorage.language === "ar" ? "ar" : "en");
-    }, [])
 
     return (
         <React.Fragment>

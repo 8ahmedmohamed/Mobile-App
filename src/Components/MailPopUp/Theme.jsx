@@ -6,19 +6,20 @@ const useStyles = makeStyles()((theme) => {
             margin: 0,
         },
         email: {
-            right: '20px',
+            // right: '20px',
+            zIndex: '9999',
             bottom: '70px',
             padding: '15px',
-            display: 'flex',
+            display: 'none',
             position: 'fixed',
             alignItems: 'center',
             borderRadius: '50% !important',
             color: theme.palette.primary.contrastText,
             backgroundColor: theme.palette.primary.dark,
-            '&.dirRight': {
-                right: 'auto',
-                left: '20px !important',
-            }
+            // '&.dirRight': {
+            right: 'auto',
+            left: '20px !important',
+            // }
         }
     }
 });

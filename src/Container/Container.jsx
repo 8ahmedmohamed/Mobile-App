@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+// Translation
+import i18next from "i18next";
 
 // React Router
 import { Outlet } from 'react-router-dom';
@@ -8,12 +11,7 @@ import { Box } from "@mui/material";
 
 // Components
 import Navigation from '../Components/Navigation/Navigation';
-
-// Scroll To Top
-import ScrollToTop from 'react-scroll-to-top';
-
-// Icons
-import { Email } from '@mui/icons-material';
+import MailPopUp from '../Components/MailPopUp/MailPopUp';
 
 // Theme
 import useStyles from './Theme';
@@ -21,13 +19,17 @@ import useStyles from './Theme';
 const Container = () => {
     const { classes } = useStyles();
 
+    useEffect(() => {
+        i18next.changeLanguage(localStorage.language === "ar" ? "ar" : "en");
+    }, [])
+
     return (
         <React.Fragment>
             <Box className={classes.root}>
                 <Outlet />
             </Box>
             <Navigation />
-            <ScrollToTop smooth className={classes.scrollToTop + ` ${localStorage.language === 'ar' ? 'dirRight' : ''}`} component={<Email />} />
+            <MailPopUp />
         </React.Fragment>
     )
 }

@@ -10,6 +10,9 @@ import Slider from '../../../Components/Slider/Slider';
 // Translation
 import { useTranslation } from 'react-i18next';
 
+//React Router
+import { NavLink } from 'react-router-dom';
+
 // Images
 import zaferVillage from '../../../assets/zaferVillage.jpg';
 import ebnRakoshPalace from '../../../assets/ebnRakoshPalace.jpg';
@@ -38,41 +41,37 @@ const Villages = () => {
                     </Splide>
                 </Box>
                 <Box className={classes.villages}>
-                    <Card sx={{ display: 'flex', margin: '20px 10px' }}>
-                        <CardMedia sx={{ width: '35%' }} image={zaferVillage} title="green iguana" />
-                        <CardContent>
-                            <Typography gutterBottom variant="h5">{t('Villages:alDhafeerNeighborhood')}</Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Lizards are a widespread group of squamate reptiles.
-                            </Typography>
+                    <Card className={classes.card}>
+                        <CardContent className={classes.cardContent}>
+                            <Typography className={classes.cardTitle} gutterBottom variant="h6">{t('Villages:alDhafeerNeighborhood')}</Typography>
+                            <Typography variant="body2">{t('Villages:alDhafeerNeighborhoodDescription')}</Typography>
+                            <NavLink to='/' className={classes.more} onClick={() => { }}>{t('Villages:more')}...</NavLink>
                         </CardContent>
+                        <CardMedia className={classes.cardImage} image={zaferVillage} title="Al-Dhafeer Neighborhood" />
                     </Card>
-                    <Card sx={{ display: 'flex', margin: '20px 10px' }}>
-                        <CardMedia sx={{ width: '35%' }} image={ebnRakoshPalace} title="green iguana" />
-                        <CardContent>
-                            <Typography gutterBottom variant="h5">{t('Villages:qasrBinRaqoush')}</Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Lizards are a widespread group of squamate reptiles.
-                            </Typography>
+                    <Card className={classes.card}>
+                        <CardContent className={classes.cardContent}>
+                            <Typography className={classes.cardTitle} gutterBottom variant="h6">{t('Villages:qasrBinRaqoush')}</Typography>
+                            <Typography variant="body2">{t('Villages:qasrBinRaqoushDescription')}</Typography>
+                            <NavLink to='/' className={classes.more} onClick={() => { }}>{t('Villages:more')}...</NavLink>
                         </CardContent>
+                        <CardMedia className={classes.cardImage} image={ebnRakoshPalace} title="Qasr Bin Raqoush" />
                     </Card>
-                    <Card sx={{ display: 'flex', margin: '20px 10px' }}>
-                        <CardMedia sx={{ width: '35%' }} image={meldVillage} title="green iguana" />
-                        <CardContent>
-                            <Typography gutterBottom variant="h5">{t('Villages:alMaldVillage')}</Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Lizards are a widespread group of squamate reptiles.
-                            </Typography>
+                    <Card className={classes.card}>
+                        <CardContent className={classes.cardContent}>
+                            <Typography className={classes.cardTitle} gutterBottom variant="h6">{t('Villages:alMaldVillage')}</Typography>
+                            <Typography variant="body2">{t('Villages:alMaldVillageDescription')}</Typography>
+                            <NavLink to='/' className={classes.more} onClick={() => { }}>{t('Villages:more')}...</NavLink>
                         </CardContent>
+                        <CardMedia className={classes.cardImage} image={meldVillage} title="Al-Mald Village" />
                     </Card>
-                    <Card sx={{ display: 'flex', margin: '20px 10px' }}>
-                        <CardMedia sx={{ width: '35%' }} image={ghshamraVillage} title="green iguana" />
-                        <CardContent>
-                            <Typography gutterBottom variant="h5">{t('Villages:alGhashamraVillage')}</Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Lizards are a widespread group of squamate reptiles.
-                            </Typography>
+                    <Card className={classes.card}>
+                        <CardContent className={classes.cardContent}>
+                            <Typography className={classes.cardTitle} gutterBottom variant="h6">{t('Villages:alGhashamraVillage')}</Typography>
+                            <Typography variant="body2">{t('Villages:alGhashamraVillageDescription')}</Typography>
+                            <NavLink to='/' className={classes.more} onClick={() => { }}>{t('Villages:more')}...</NavLink>
                         </CardContent>
+                        <CardMedia className={classes.cardImage} image={ghshamraVillage} title="Al-Ghashamra Village" />
                     </Card>
                 </Box>
             </Box>

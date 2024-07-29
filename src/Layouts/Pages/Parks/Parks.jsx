@@ -10,6 +10,9 @@ import Slider from '../../../Components/Slider/Slider';
 // Translation
 import { useTranslation } from 'react-i18next';
 
+//React Router
+import { NavLink } from 'react-router-dom';
+
 // Images
 import saudiArabiaMap from '../../../assets/saudiArabiaMap.jpg';
 
@@ -35,42 +38,38 @@ const Parks = () => {
                     </Splide>
                 </Box>
                 <Box className={classes.parks}>
-                    <Card sx={{ display: 'flex', margin: '20px 10px' }}>
-                        <CardMedia sx={{ width: '35%' }} image={saudiArabiaMap} title="green iguana" />
-                        <CardContent>
-                            <Typography gutterBottom variant="h5">{t('Parks:alJanabinPark')}</Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Lizards are a widespread group of squamate reptiles.
-                            </Typography>
+                    <Card className={classes.card}>
+                        <CardContent className={classes.cardContent}>
+                            <Typography className={classes.cardTitle} gutterBottom variant="h6">{t('Parks:alJanabinPark')}</Typography>
+                            <Typography variant="body2">{t('Parks:alJanabinParkDescription')}</Typography>
+                            <NavLink to='/' className={classes.more} onClick={() => { }}>{t('Parks:more')}...</NavLink>
                         </CardContent>
+                        <CardMedia className={classes.cardImage} image={saudiArabiaMap} title="Al-Janabin Park" />
                     </Card>
-                    <Card sx={{ display: 'flex', margin: '20px 10px' }}>
-                        <CardMedia sx={{ width: '35%' }} image={saudiArabiaMap} title="green iguana" />
-                        <CardContent>
-                            <Typography gutterBottom variant="h5">{t('Parks:raghadanPark')}</Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Lizards are a widespread group of squamate reptiles.
-                            </Typography>
+                    <Card className={classes.card}>
+                        <CardContent className={classes.cardContent}>
+                            <Typography className={classes.cardTitle} gutterBottom variant="h6">{t('Parks:raghadanPark')}</Typography>
+                            <Typography variant="body2">{t('Parks:raghadanParkDescription')}</Typography>
+                            <NavLink to='/' className={classes.more} onClick={() => { }}>{t('Parks:more')}...</NavLink>
                         </CardContent>
+                        <CardMedia className={classes.cardImage} image={saudiArabiaMap} title="Raghadan Park" />
                     </Card>
-                    <Card sx={{ display: 'flex', margin: '20px 10px' }}>
-                        <CardMedia sx={{ width: '35%' }} image={saudiArabiaMap} title="green iguana" />
-                        <CardContent>
-                            <Typography gutterBottom variant="h5">{t('Parks:princeMishariPark')}</Typography>
-                            {/* <Typography gutterBottom variant="h5">{t('Parks:princeMishariBinSaudbinAbdulazizPark')}</Typography> */}
-                            <Typography variant="body2" color="text.secondary">
-                                Lizards are a widespread group of squamate reptiles.
-                            </Typography>
+                    <Card className={classes.card}>
+                        <CardContent className={classes.cardContent}>
+                            <Typography className={classes.cardTitle} gutterBottom variant="h6">{t('Parks:princeMishariPark')}</Typography>
+                            {/* <Typography className={classes.cardTitle} gutterBottom variant="h6">{t('Parks:princeMishariBinSaudbinAbdulazizPark')}</Typography> */}
+                            <Typography variant="body2">{t('Parks:princeMishariParkDescription')}</Typography>
+                            <NavLink to='/' className={classes.more} onClick={() => { }}>{t('Parks:more')}...</NavLink>
                         </CardContent>
+                        <CardMedia className={classes.cardImage} image={saudiArabiaMap} title="Prince Mishari Park" />
                     </Card>
-                    <Card sx={{ display: 'flex', margin: '20px 10px' }}>
-                        <CardMedia sx={{ width: '35%' }} image={saudiArabiaMap} title="green iguana" />
-                        <CardContent>
-                            <Typography gutterBottom variant="h5">{t('Parks:alShukranPark')}</Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Lizards are a widespread group of squamate reptiles.
-                            </Typography>
+                    <Card className={classes.card}>
+                        <CardContent className={classes.cardContent}>
+                            <Typography className={classes.cardTitle} gutterBottom variant="h6">{t('Parks:alShukranPark')}</Typography>
+                            <Typography variant="body2">{t('Parks:alShukranParkDescription')}</Typography>
+                            <NavLink to='/' className={classes.more} onClick={() => { }}>{t('Parks:more')}...</NavLink>
                         </CardContent>
+                        <CardMedia className={classes.cardImage} image={saudiArabiaMap} title="Al-Shukran Park" />
                     </Card>
                 </Box>
             </Box>

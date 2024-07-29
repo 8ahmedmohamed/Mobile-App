@@ -11,7 +11,7 @@ import Slider from '../../../Components/Slider/Slider';
 import { useTranslation } from 'react-i18next';
 
 // Images
-import saudiArabiaMap from '../../../assets/saudiArabiaMap.jpg';
+import lohmaWatn from '../../../assets/lohmaWatn.jpg';
 
 // Theme
 import useStyles from './Theme';
@@ -36,45 +36,41 @@ const Events = () => {
                 </Box>
                 <Box className={classes.events}>
                     <Grid container gap={2} justifyContent='center'>
-                        <Grid item xs={5.5}>
-                            <Box sx={{ margin: '20px 10px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                                <img style={{ height: '150px', width: '50%' }} src={saudiArabiaMap} alt="green iguana" />
-                                <Typography variant="h6">{t('Events:alJanabinPark')}</Typography>
-                                <Typography variant="span" color='text.secondary'>20/11/1444 H</Typography>
-                                <Typography sx={{ textAlign: 'center', color: '#EE6821' }} variant="body2">
-                                    Lizards are a widespread group of squamate reptiles.
-                                </Typography>
-                            </Box>
+                        <Grid className={classes.item} item xs={5.5}>
+                            <img className={classes.image} src={lohmaWatn} alt="Lohma Watn" />
+                            <Typography variant="h6">{t('Events:lohmaWatnPlay')}</Typography>
+                            <Typography variant="span" color='text.secondary'>21/1/1446 H</Typography>
+                            <Typography className={classes.description} variant="body2">{t('Events:alBahaTheMainTheaterInAlAmana')}</Typography>
                         </Grid>
-                        <Grid item xs={5.5}>
-                            <Box sx={{ margin: '20px 10px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                                <img style={{ height: '150px', width: '50%' }} src={saudiArabiaMap} alt="green iguana" />
-                                <Typography variant="h6">{t('Events:raghadanPark')}</Typography>
-                                <Typography variant="span" color='text.secondary'>20/11/1444 H</Typography>
-                                <Typography sx={{ textAlign: 'center', color: '#EE6821' }} variant="body2">
-                                    Lizards are a widespread group of squamate reptiles.
-                                </Typography>
-                            </Box>
+                        <Grid className={classes.item} item xs={5.5}>
+                            <img className={classes.image} src={lohmaWatn} alt="Lohma Watn" />
+                            <Typography variant="h6">{t('Events:lohmaWatnPlay')}</Typography>
+                            <Typography variant="span" color='text.secondary'>21/1/1446 H</Typography>
+                            <Typography className={classes.description} variant="body2">{t('Events:alBahaTheMainTheaterInAlAmana')}</Typography>
                         </Grid>
-                        <Grid item xs={5.5}>
-                            <Box sx={{ margin: '20px 10px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                                <img style={{ height: '150px', width: '50%' }} src={saudiArabiaMap} alt="green iguana" />
-                                <Typography variant="h6">{t('Events:princeMishariPark')}</Typography>
-                                <Typography variant="span" color='text.secondary'>20/11/1444 H</Typography>
-                                <Typography sx={{ textAlign: 'center', color: '#EE6821' }} variant="body2">
-                                    Lizards are a widespread group of squamate reptiles.
-                                </Typography>
-                            </Box>
+                        <Grid className={classes.item} item xs={5.5}>
+                            <img className={classes.image} src={lohmaWatn} alt="Lohma Watn" />
+                            <Typography variant="h6">{t('Events:lohmaWatnPlay')}</Typography>
+                            <Typography variant="span" color='text.secondary'>21/1/1446 H</Typography>
+                            <Typography className={classes.description} variant="body2">{t('Events:alBahaTheMainTheaterInAlAmana')}</Typography>
                         </Grid>
-                        <Grid item xs={5.5}>
-                            <Box sx={{ margin: '20px 10px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                                <img style={{ height: '150px', width: '50%' }} src={saudiArabiaMap} alt="green iguana" />
-                                <Typography variant="h6">{t('Events:alShukranPark')}</Typography>
-                                <Typography variant="span" color='text.secondary'>20/11/1444 H</Typography>
-                                <Typography sx={{ textAlign: 'center', color: '#EE6821' }} variant="body2">
-                                    Lizards are a widespread group of squamate reptiles.
-                                </Typography>
-                            </Box>
+                        <Grid className={classes.item} item xs={5.5}>
+                            <img className={classes.image} src={lohmaWatn} alt="Lohma Watn" />
+                            <Typography variant="h6">{t('Events:lohmaWatnPlay')}</Typography>
+                            <Typography variant="span" color='text.secondary'>21/1/1446 H</Typography>
+                            <Typography className={classes.description} variant="body2">{t('Events:alBahaTheMainTheaterInAlAmana')}</Typography>
+                        </Grid>
+                        <Grid className={classes.item} item xs={5.5}>
+                            <img className={classes.image} src={lohmaWatn} alt="Lohma Watn" />
+                            <Typography variant="h6">{t('Events:lohmaWatnPlay')}</Typography>
+                            <Typography variant="span" color='text.secondary'>21/1/1446 H</Typography>
+                            <Typography className={classes.description} variant="body2">{t('Events:alBahaTheMainTheaterInAlAmana')}</Typography>
+                        </Grid>
+                        <Grid className={classes.item} item xs={5.5}>
+                            <img className={classes.image} src={lohmaWatn} alt="Lohma Watn" />
+                            <Typography variant="h6">{t('Events:lohmaWatnPlay')}</Typography>
+                            <Typography variant="span" color='text.secondary'>21/1/1446 H</Typography>
+                            <Typography className={classes.description} variant="body2">{t('Events:alBahaTheMainTheaterInAlAmana')}</Typography>
                         </Grid>
                     </Grid>
                 </Box>

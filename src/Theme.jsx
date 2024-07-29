@@ -1,6 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 
-const theme = createTheme({
+const theme = (theme) => createTheme({
+    direction: `${theme === 'ar' ? 'rtl' : 'ltr'}`,
     palette: {
         primary: {
             main: '#556ee6',
